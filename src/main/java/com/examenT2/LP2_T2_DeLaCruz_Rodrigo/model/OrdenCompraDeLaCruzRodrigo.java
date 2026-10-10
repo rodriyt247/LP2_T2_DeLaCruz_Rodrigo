@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,7 +30,7 @@ public class OrdenCompraDeLaCruzRodrigo {
     private ProveedorDeLaCruzRodrigo proveedor;
 
     @Column(name = "monto")
-    private Double monto;
+    private BigDecimal monto;
 
     @Column(name = "direccion_entrega")
     private String direccionEntrega;
@@ -37,7 +39,7 @@ public class OrdenCompraDeLaCruzRodrigo {
     private LocalDate fechaEntrega;
 
     @Column(name = "estado")
-    private String estado;
+    private String estado = "P";
     
     public String getEstadoDescripcion() {
         if (estado == null) return "";

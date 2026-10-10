@@ -36,7 +36,7 @@ public class ProveedorDeLaCruzRodrigo {
     @Column(name = "pagina_web")
     private String paginaWeb;
 
-    // Relación exigida por la rúbrica
+    
     @ManyToOne
     @JoinColumn(name = "id_rubro")
     private RubroDeLaCruzRodrigo rubro;
